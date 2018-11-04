@@ -9,21 +9,21 @@
     <body style="background-color: darkcyan">
 
         <center>
-        <h1> Hola Mundo de Sabores! </h1>
-        <h2> Integrantes </h2>     
-        <li> Manjarrés Pabón Juan Luis </li>
-        <li> Pardo Rueda Kimberly Johana </li>
-        <li> Pineda Otero Néstor Antonio </li>
-        
-        <br>
-        <br>
-
-        versión PHP: "  .  PHP_VERSION 
-        <br>
-        github: https://github.com/jumanja/sabores.git
-        <br>
-        <br>
-        <img src="CocinaFacil.jpg" alt=""/>
+           <?php
+           echo '<h2> Hola Mundo de Sabores! </h2>';
+           echo '<h2> Integrantes </h2>';
+           echo '<li> Manjarrés Pabón Juan Luis </li>';
+           echo '<li> Pardo Rueda Kimberly Johana </li>';
+           echo '<li> Pineda Otero Néstor Antonio </li>';
+           echo '<br>';
+           echo '<br>';
+           echo 'versión PHP: "  .  PHP_VERSION';
+           echo '<br>';
+           echo 'github: https://github.com/jumanja/sabores.git';
+           echo '<br>';
+           echo '<br>';
+           echo '<img src="CocinaFacil.jpg" alt=""/>';
+           ?>;
         </center>
     </body>
 </html>
