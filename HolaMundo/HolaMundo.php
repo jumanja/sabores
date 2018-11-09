@@ -2,7 +2,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Sabores para IC</title>
-        
+
     </head>
     <body>
 
@@ -17,7 +17,7 @@
            echo '<li> Pineda Otero Néstor Antonio </li>';
            echo '<br>';
            echo '<br>';
-           echo 'versión PHP: "  .  PHP_VERSION';
+           echo 'versión PHP: '  .  PHP_VERSION;
            echo '<br>';
            echo 'github: https://github.com/jumanja/sabores.git';
            echo '<br>';
