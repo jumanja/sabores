@@ -1,0 +1,59 @@
+{
+  "iniciarSesion": {
+    "type":"APSTFERN",
+    "isLogged":"N",
+    "icon":"account_circle",
+    "item":"Iniciar Sesión",
+    "status":"A"
+  },
+  "elaborarActas": {
+    "type":"S",
+    "isLogged":"Y",
+    "icon":"keyboard",
+    "item":"Elaborar Actas",
+    "status":"A"
+  },
+  "actasPorAprobar": {
+    "type":"PSTFE",
+    "isLogged":"Y",
+    "icon":"border_color",
+    "item":"Actas por Aprobar",
+    "status":"A"
+  },
+  "actasPorRevisar": {
+    "type":"PSTFE",
+    "isLogged":"Y",
+    "icon":"visibility",
+    "item":"Actas por Revisasr",
+    "status":"A"
+  },
+  "buscarActas": {
+    "type":"PSTFERN",
+    "isLogged":"Y",
+    "icon":"find_in_page",
+    "item":"Buscar Actas",
+    "status":"A"
+  },
+  "informeActas": {
+    "type":"PSTFERN",
+    "isLogged":"Y",
+    "icon":"equalizer",
+    "item":"Informe de Actas",
+    "status":"A"
+  },
+  "configurarTablas": {
+    "type":"AS",
+    "isLogged":"Y",
+    "icon":"settings",
+    "item":"Configurar",
+    "status":"A"
+  },
+  "cerrarSesion": {
+    "type":"APSTFERN",
+    "isLogged":"Y",
+    "icon":"close",
+    "item":"Cerrar Sesión",
+    "status":"A"
+  }
+
+}

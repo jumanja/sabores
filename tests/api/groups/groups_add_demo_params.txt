@@ -1,0 +1,1 @@
+group=demo&nombre=groupernidad Demostración&ciudad=Bogotá&direccion=Conocida&email=jumanja@gmail.com&&estado=A&logo=vacio.png

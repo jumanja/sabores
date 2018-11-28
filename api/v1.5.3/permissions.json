@@ -1,0 +1,563 @@
+[{
+  "PUT:/logout": {
+    "tiporol": {
+      "incluye": "*",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/tags/count": {
+    "tiporol": {
+      "incluye": "I",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "S",
+      "excluye": ""
+    }
+  },
+  "GET:/tags": {
+    "tiporol": {
+      "incluye": "I",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "S",
+      "excluye": ""
+    }
+  },
+  "GET:/tags/:id": {
+    "tiporol": {
+      "incluye": "I",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "S",
+      "excluye": ""
+    }
+  },
+  "POST:/tags": {
+    "tiporol": {
+      "incluye": "I",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "S",
+      "excluye": ""
+    }
+  },
+  "PUT:/tags": {
+    "tiporol": {
+      "incluye": "I",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "S",
+      "excluye": ""
+    }
+  },
+  "POST:/tags/add": {
+    "tiporol": {
+      "incluye": "I",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "S",
+      "excluye": ""
+    }
+  },
+  "POST:/tags/update": {
+    "tiporol": {
+      "incluye": "I",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "S",
+      "excluye": ""
+    }
+  },
+  "PUT:/tags/delete": {
+    "tiporol": {
+      "incluye": "I",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "S",
+      "excluye": ""
+    }
+  },
+  "GET:/users/count": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/users": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/users/:id": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/users": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/users/token": {
+    "tiporol": {
+      "incluye": "*",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/users": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/users/add": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/users/update": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/users/delete": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/groups/count": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/groups": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/groups/:id": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/groups": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/groups": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/groups/add": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/groups/update": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/groups/delete": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/places/count": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/places": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/places/:id": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/places": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/places": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/places/add": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/places/update": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/places/delete": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/types/count": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/types": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/types/:id": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/types": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/types": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/types/add": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/types/update": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/types/delete": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/servs/count": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/servs": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/servs/:id": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/servs": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/servs": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/servs/add": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/servs/update": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/servs/delete": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/users": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/mails": {
+    "tiporol": {
+      "incluye": "I",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/mins": {
+    "tiporol": {
+      "incluye": "I",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/mins/count": {
+    "tiporol": {
+      "incluye": "I",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/mins/items": {
+    "tiporol": {
+      "incluye": "I",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/mins": {
+    "tiporol": {
+      "incluye": "I",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  }
+
+}]

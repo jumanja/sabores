@@ -1,0 +1,1 @@
+grupo=demo&usuario=s&apellidos=Apellidois&nombres=Nombres&password=s&email=jumanja@hotmail.com&servicio=S&estado=A

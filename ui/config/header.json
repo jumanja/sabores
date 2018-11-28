@@ -1,0 +1,61 @@
+{
+	"metas":{
+		"1":{
+			"charset":"UTF-8"
+		},
+		"2":{
+			"http-equiv":"X-UA-Compatible",
+			"content":"IE=edge"
+		},
+		"3":{
+			"name":"viewport",
+			"content":"width=device-width, initial-scale=1"
+		},
+		"4":{
+			"name":"description",
+			"content":"SABORES"
+		},
+		"5":{
+			"name":"author",
+			"content":"jumanja.net"
+		}
+	},
+	"links":{
+		"1":{
+			"rel":"icon",
+			"href":"ui/styles/favicon.ico"
+		},
+		"2":{
+			"rel":"stylesheet",
+			"href":"ui/js/libs/materialize/css/materialize.min.css"
+		},
+		"3":{
+			"rel":"stylesheet",
+			"href":"ui/styles/main.css"
+		},
+		"4":{
+			"rel":"stylesheet",
+			"href":"ui/styles/color_proto.css"
+		},
+		"5":{
+			"rel":"appple-touch-icon",
+			"href":"ui/img/apple-touch-icon.png"
+		}
+	},
+	"title":"Sabrosario - Inventario de Sabores",
+	"scripts":{
+		"1":{
+			"src":"js/libs/main.js"
+		},
+		"2":{
+			"src":"js/libs/materialize/js/materialize.min.js"
+		}
+	},
+	"defaultLang":"es",
+	"defaultMode":"proto",
+	"img_xs":"header2016sm.png",
+	"img_all":"header2016.png",
+	"org":"En Español",
+	"URL":"https://sabor.jumanja.net",
+	"thisURL":"./sabores"
+}

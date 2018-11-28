@@ -1,0 +1,1 @@
+export myapi=http://localhost/jumanja.net/sabores/api/v1.5.3/index.php/

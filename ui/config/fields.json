@@ -1,0 +1,267 @@
+{
+  "grupos": {
+    "status":"A",
+    "fields":[
+      {
+        "code":"grupo",
+        "desc":"Grupo", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"AB", "edctr":"text", "eddef":"",
+        "icon":"vpn_key", "help":"Código que identifica a el Grupo"
+      },
+      {
+        "code":"nombre",
+        "desc":"Nombre", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"ACB", "edctr":"text", "eddef":"",
+        "icon":"group", "help":"Nombre de el Grupo"
+      },
+      {
+        "code":"estado",
+        "desc":"Estado", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"select",
+        "edact":"ACRB",
+        "edctr":"select;A-Activa,I-Inactiva,R-Retirada",
+        "eddef":"A",
+        "icon":"traffic", "help":"Estado de el Grupo"
+      },
+      {
+        "code":"logo",
+        "desc":"Logo", "required":false,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"ACB", "edctr":"text", "eddef":"",
+        "icon":"image", "help":"Logo de el Grupo"
+      },
+      {
+        "code":"direccion",
+        "desc":"Dirección", "required":false,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"ACB", "edctr":"text", "eddef":"",
+        "icon":"location_on", "help":"Dirección de el Grupo"
+      },
+      {
+        "code":"ciudad",
+        "desc":"Ciudad", "required":false,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"ACB", "edctr":"text", "eddef":"",
+        "icon":"location_city", "help":"Ciudad de el Grupo"
+      },
+      {
+        "code":"email",
+        "desc":"Email", "required":false,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"AC", "edctr":"email", "eddef":"",
+        "icon":"email", "help":"Correo Electrónico de Contacto"
+      }
+
+    ]
+
+  },
+  "places": {
+    "status":"A",
+    "fields":[
+      {
+        "code":"grupo",
+        "desc":"Grupo", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"", "edctr":"selectTable;grupos,nombre,grupo", "eddef":"",
+        "icon":"group", "help":"Código de el Grupo"
+      },
+      {
+        "code":"lugar", "alias":"lugar",
+        "desc":"Lugar", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"ACB", "edctr":"text", "eddef":"",
+        "icon":"vpn_key", "help":"Lugar de Reuniones"
+      },
+      {
+        "code":"estado",
+        "desc":"Estado", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"select",
+        "edact":"ACRB",
+        "edctr":"select;A-Activo,I-Inactivo,R-Retirado",
+        "eddef":"A",
+        "icon":"traffic", "help":"Estado del Lugar"
+      }
+
+    ]
+
+  },
+  "types": {
+    "status":"A",
+    "fields":[
+      {
+        "code":"grupo",
+        "desc":"Grupo", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"", "edctr":"selectTable;grupos,nombre,grupo", "eddef":"",
+        "icon":"group", "help":"Código de el Grupo"
+      },
+      {
+        "code":"tipo", "alias":"tipo",
+        "desc":"Tipo", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"A", "edctr":"text", "eddef":"",
+        "icon":"vpn_key", "help":"Tipo de Actas"
+      },
+      {
+        "code":"nombre",
+        "desc":"Nombre", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"ACB", "edctr":"text", "eddef":"",
+        "icon":"sort_by_alpha", "help":"Nombre del Tipo de Acta"
+      },
+      {
+        "code":"estado",
+        "desc":"Estado", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"select",
+        "edact":"ACRB",
+        "edctr":"select;A-Activo,I-Inactivo,R-Retirado",
+        "eddef":"A",
+        "icon":"traffic", "help":"Estado del Tipo de Acta"
+      }
+
+    ]
+
+  },
+    "users": {
+    "status":"A",
+    "fields":[
+      {
+        "code":"grupo",
+        "desc":"Grupo", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"A", "edctr":"selectTable;grupos,nombre,grupo", "eddef":"",
+        "icon":"group", "help":"Código de el Grupo"
+      },
+      {
+        "code":"usuario",
+        "desc":"Usuario", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"A", "edctr":"text", "eddef":"",
+        "icon":"vpn_key", "help":"Código de Usuario"
+      },
+      {
+        "code":"nombres",
+        "desc":"Nombres", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"AC", "edctr":"text", "eddef":"",
+        "icon":"sort_by_alpha", "help":"Nombres del Usuario"
+      },
+      {
+        "code":"apellidos",
+        "desc":"Apellidos", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"AC", "edctr":"text", "eddef":"",
+        "icon":"sort_by_alpha", "help":"Apellidos del Usuario"
+      },
+      {
+        "code":"password",
+        "desc":"Contraseña", "required":true,
+        "vwact":"", "vwctr":"label",
+        "edact":"", "edctr":"password", "eddef":"",
+        "icon":"lock", "help":"Contraseña del Usuario"
+      },
+      {
+        "code":"email",
+        "desc":"Correo Electrónico", "required":false,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"AC", "edctr":"email", "eddef":"",
+        "icon":"mail", "help":"Correo Electrónico"
+      },
+      {
+        "code":"rol",
+        "desc":"rol", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"select",
+        "edact":"AC",
+        "edctr":"selectTable;servs,nombre,rol",
+        "eddef":"T",
+        "icon":"thumb_up", "help":"rol que presta"
+      },
+      {
+        "code":"estado",
+        "desc":"Estado", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"select",
+        "edact":"ACRB",
+        "edctr":"select;A-Activo,I-Inactivo,R-Retirado",
+        "eddef":"A",
+        "icon":"traffic", "help":"Estado del Usuario"
+      }
+
+    ]
+
+  },
+  "servs": {
+    "status":"A",
+    "fields":[
+      {
+        "code":"rol",
+        "desc":"rol", "required":true,
+        "vwact":"ACRIMXV", "vwctr":"label",
+        "edact":"AC",
+        "edctr":"text",
+        "eddef":"",
+        "icon":"vpn_key", "help":"Código del rol"
+      },
+      {
+        "code":"tiporol",
+        "desc":"Tipo rol", "required":true,
+        "vwact":"ACRIMXV", "vwctr":"select",
+        "edact":"AC",
+        "edctr":"select;A-Administrador,I-Integrante,V-Visitante",
+        "eddef":"",
+        "icon":"title", "help":"Tipo de rol"
+      },
+      {
+        "code":"nombre",
+        "desc":"Nombre", "required":true,
+        "vwact":"ACRIMXV", "vwctr":"label",
+        "edact":"AC",
+        "edctr":"text",
+        "eddef":"",
+        "icon":"sort_by_alpha", "help":"Nombre del rol"
+      },
+      {
+        "code":"estado",
+        "desc":"Estado", "required":true,
+        "vwact":"ACRIMXV", "vwctr":"select",
+        "edact":"ACRB",
+        "edctr":"select;A-Activo,I-Inactivo,R-Retirado",
+        "eddef":"A",
+        "icon":"traffic","help":"Estado del rol"
+      }
+
+    ]
+
+  },
+  "tags": {
+    "status":"A",
+    "fields":[
+      {
+        "code":"grupo",
+        "desc":"Grupo", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"", "edctr":"selectTable;grupos,nombre,grupo", "eddef":"",
+        "icon":"group", "help":"Código de el Grupo"
+      },
+      {
+        "code":"etiqueta",
+        "desc":"Etiqueta", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"ACB", "edctr":"text", "eddef":"",
+        "icon":"vpn_key", "help":"Etiqueta o Palabra Clave"
+      },
+      {
+        "code":"estado",
+        "desc":"Estado", "required":true,
+        "view":"A", "vwact":"ACRIMXV", "vwctr":"select",
+        "edit":"A", "edact":"ACRB",
+        "edctr":"select;A-Activa,I-Inactiva,R-Retirada",
+        "eddef":"A",
+        "icon":"traffic","help":"Estado de la Etiqueta"
+      }
+
+    ]
+
+  }
+}

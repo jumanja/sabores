@@ -1,0 +1,1 @@
+grupo=demo&usuario=jmanjarres&apellidos=Manjarres&nombres=Juan&password=jmanjarres&email=jumanja@gmail.com&rol=A&estado=A

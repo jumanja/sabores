@@ -1,0 +1,1 @@
+group=demo&usuario=admin&apellidos=Del Sistema&nombres=Administrador&password=webmaster&email=jumanja@gmail.com&servicio=A&estado=A

@@ -1,0 +1,2 @@
+id=1&token=$2y$10$ur4GaZOCYRbMyE5l5arGwu7LpC.4aTrD3K4xQqBMXOmZ29MZkXih2&grupo=demo&servicio=A&tiposerv=A&
+grupo=demo&usuario=s&apellidos=Apellidois&nombres=Nombres&password=s&email=jumanja@hotmail.com&servicio=S&estado=A

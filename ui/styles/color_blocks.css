@@ -1,0 +1,46 @@
+/* Will override main colors for grey versions, intended for blocks */
+.dark-primary-color {
+  background-color: #424242;
+}
+
+.default-primary-color {
+  background: #666666;
+}
+
+.light-primary-color, .progress {
+  background: #cccccc;
+}
+
+.text-primary-color {
+  color: #424242;
+}
+
+.text-secondary-color {
+  color: #ffffff;
+}
+
+.accent-color {
+  background: #feafea;
+}
+
+.divider-color {
+  border-color: #BDBDBD;
+}
+
+.pagination li.active, span.badge.new, .progress .determinate,
+.page-footer, .userView, .side-nav  {
+  background: #424242;
+}
+
+input[type="checkbox"].filled-in:checked+label:after{
+  border-color: #424242;
+  background-color: #424242;
+}
+
+.picker__day--selected:hover, .picker--focused .picker__day--selected, .picker__date-display{
+  background-color: #424242;
+}
+
+.picker__close, .picker__today, .picker__clear{
+  color: #424242;
+}

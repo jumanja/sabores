@@ -22,7 +22,7 @@
            echo 'github: https://github.com/jumanja/sabores.git';
            echo '<br>';
            echo '<br>';
-           echo '<img src="CocinaFacil.jpg" alt=""/>';
+           echo '<img src="saboresLogoPeque.png" alt=""/>';
            ?>;
         </center>
     </body>

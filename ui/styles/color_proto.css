@@ -1,0 +1,93 @@
+/* Will override main colors for grey versions, intended for wireframe */
+// Paleta de Colores
+.dark-primary-color    { background: #00695c ; }
+.default-primary-color { background: #009688; }
+.light-primary-color   { background: #D1C4E9; }
+.text-primary-color    { color: #FFFFFF; }
+.text-secondary-color  {color: #757575;}
+.accent-color          { background: #009688; }
+.divider-color         { border-color: #BDBDBD; }
+
+.pagination li.active, span.badge.new, .progress .determinate,
+/*.page-footer, .user-view  {
+  background: #00695c;
+}*/
+.user-view{
+     background-image: url(../img/ribbon.png);
+     background-repeat: no-repeat;
+     background-position: 10% 0% ;
+     padding: 8px 8px 0 !important;
+}
+
+
+input[type="checkbox"].filled-in:checked+label:after{
+  border-color: #00695c;
+  background-color: #512DA8;
+}
+
+.picker__day--selected:hover, .picker--focused .picker__day--selected, .picker__date-display{
+  background-color: #00695c;
+}
+
+.picker__close, .picker__today, .picker__clear{
+  color: #00695c;
+}
+
+.side-nav {
+  /* background-color: #757575; */
+}
+.abierto, .cerrado, .inactivo {
+  display:block;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+}
+.inactivo{
+  background-color: #A84081;
+}
+.cerrado{
+  background-color: #666666;
+}
+.abierto{
+  background-color: #63D941;
+}
+.card-like{
+  /*background-color: #673AB7;*/
+  background-color: #00695c;
+}
+.cardlike td {
+  border: 1px solid #ccc;
+  background-color: #ccc;
+}
+.icon-sisga {
+  color: #00695c;
+}
+input:read-only {
+    background-color: #ccc;
+}
+:required{
+  /*background-color: #fff176;*/
+  background-color: #fff9c4;
+}
+/*.tabs:focus-within .tab {
+  color: red;
+}*/
+/*when hover*/
+.tabs .tab {
+   background-color: #009688;
+   color: white;
+}
+.tabs .tab a {
+   background-color: transparent;
+   color: white;
+}
+
+.tabs .tab a:hover{
+   background-color: #b2dfdb;
+   color: white;
+}
+/*when active*/
+.tabs .tab a.active{
+   background-color: #4db6ac;
+   color: white;
+}

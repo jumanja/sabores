@@ -1,0 +1,1 @@
+group=otra&nombre=Segunda groupernidad Demostración&ciudad=Barranquilla&direccion=También Conocida&email=jumanja@hotmail.com&&estado=A&logo=vacio.png

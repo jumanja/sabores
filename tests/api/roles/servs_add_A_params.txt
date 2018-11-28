@@ -1,0 +1,1 @@
+servicio=A&tiposerv=A&nombre=Administrador&estado=A

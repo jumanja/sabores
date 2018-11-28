@@ -1,0 +1,2 @@
+clear
+more results/*.json

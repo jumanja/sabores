@@ -1,0 +1,2 @@
+id=&token=$2y$10$cMaxHee2lSTyaMH/sRtbTOd//wqnQxIbOzLY7UKTVaAdf265unCuS&servicio=&tiposerv=&
+servicio=A&tiposerv=A&nombre=Administrador&estado=A
