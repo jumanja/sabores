@@ -9,24 +9,45 @@ function getConnection()
 			//$db_username = "provbas_jumanja";
 			$db_username = "adminsabor";
 			$db_password = "uAdmin2018";
-			$connection = new PDO("mysql:host=localhost;dbname=sabor", $db_username, $db_password,
+
+			$connection = new PDO("mysql:host=db;dbname=sabor", $db_username, $db_password,
 							array(
 										PDO::ATTR_TIMEOUT => "5",
 										PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 										PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
 							)
 			);
+
+/*
+			$connection = new PDO('sqlite:sabor.sqlite3') or die('No pude abrir la base de datos');
+		         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		         $connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+*/
+
+//										PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
+
 			//$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	}
     } else {
-			$db_username = "jumanja_sisabor";
+			$db_username = "adminsabor";
 			$db_password = "uAdmin2018";
-			$connection = new PDO("mysql:host=localhost;dbname=jumanja_sabor", $db_username, $db_password,
+
+			$connection = new PDO("mysql:host=db;dbname=sabor", $db_username, $db_password,
 							array(
 										PDO::ATTR_TIMEOUT => "5",
 										PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-										PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
+										PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
 							)
 			);
+/*
+			$connection = new PDO('sqlite:sabor.sqlite3') or die('No pude abrir la base de datos');
+		         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		         $connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+
+*/
+/*,
+PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
+*/
+			//);
 										//PDO::ATTR_EMULATE_PREPARES => true
 			//$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		}

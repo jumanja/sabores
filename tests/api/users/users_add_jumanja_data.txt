@@ -1,2 +1,3 @@
-id=1&token=$2y$10$ur4GaZOCYRbMyE5l5arGwu7LpC.4aTrD3K4xQqBMXOmZ29MZkXih2&group=demo&servicio=A&tiposerv=A&
+id=1&token=$2y$10$ur4GaZOCYRbMyE5l5arGwu7LpC.4aTrD3K4xQqBMXOmZ29MZkXih2&group=demo&servicio=A&tiposerv=A
+&
 grupo=demo&usuario=jmanjarres&apellidos=Manjarres&nombres=Juan&password=jmanjarres&email=jumanja@gmail.com&rol=A&estado=A

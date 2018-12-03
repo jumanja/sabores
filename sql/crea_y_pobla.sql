@@ -1,4 +1,3 @@
-CREATE SCHEMA IF NOT EXISTS `sabor` DEFAULT CHARACTER SET utf8 ;
 USE `sabor` ;
 
 -- -----------------------------------------------------
@@ -7,14 +6,97 @@ USE `sabor` ;
 CREATE TABLE IF NOT EXISTS `sabor`.`grupos` (
   `grupo` VARCHAR(15) NOT NULL,
   `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `nombre` TEXT NOT NULL,
+  `nombre` VARCHAR(45) NOT NULL,
   `estado` CHAR(1) NOT NULL,
-  `logo` VARCHAR(45) NOT NULL,
-  `direccion` VARCHAR(45) NOT NULL,
-  `ciudad` VARCHAR(45) NOT NULL,
-  `email` VARCHAR(45) NOT NULL,
+  `logo` VARCHAR(45) NULL DEFAULT NULL,
+  `direccion` VARCHAR(45) NULL DEFAULT NULL,
+  `ciudad` VARCHAR(45) NULL DEFAULT NULL,
+  `email` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `grupoerni_UNIQUE` (`grupo` ASC))
+  UNIQUE INDEX `grupounico` (`grupo` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `sabor`.`categorias`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `sabor`.`categorias` (
+  `grupo` VARCHAR(15) NOT NULL,
+  `tipo` VARCHAR(11) NOT NULL,
+  `nombre` VARCHAR(45) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `estado` CHAR(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `categorias_UNIQUE` (`nombre` ASC),
+  INDEX `fk_grupo_idx` (`grupo` ASC))
+ENGINE = MyISAM
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `sabor`.`articulos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `sabor`.`articulos` (
+  `grupo` VARCHAR(15) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `estado` CHAR(1) NOT NULL,
+  `fecha` DATETIME NULL DEFAULT NULL,
+  `categoria` VARCHAR(45) NOT NULL,
+  `nombre` TEXT NOT NULL,
+  `lugar` VARCHAR(30) NOT NULL,
+  `observaciones` TEXT NOT NULL,
+  `fechasig` DATETIME NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fx_lug_idx` (`lugar` ASC),
+  INDEX `fx_grupo_idx` (`grupo` ASC),
+  INDEX `fx_categ_idx` (`categoria` ASC))
+ENGINE = MyISAM
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `sabor`.`etiquetas`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `sabor`.`etiquetas` (
+  `grupo` VARCHAR(15) NOT NULL,
+  `etiqueta` VARCHAR(45) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `estado` CHAR(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `etiq_UNIQUE` (`etiqueta` ASC),
+  INDEX `fx_grupo_idx` (`grupo` ASC))
+ENGINE = MyISAM
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `sabor`.`etiquetasrece`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `sabor`.`etiquetasrece` (
+  `idrece` INT(11) NOT NULL,
+  `etiqueta` VARCHAR(45) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `estado` CHAR(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `etiqacta_UNIQUE` (`idrece` ASC, `etiqueta` ASC),
+  INDEX `fx_etiq_idx` (`etiqueta` ASC))
+ENGINE = MyISAM
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `sabor`.`ingredientes`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `sabor`.`ingredientes` (
+  `grupo` VARCHAR(15) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `estado` CHAR(1) NOT NULL,
+  `idart` INT(11) NOT NULL,
+  `cantidad` INT(11) NOT NULL,
+  `observaciones` TEXT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fx_grupo_idx` (`grupo` ASC))
 ENGINE = MyISAM
 DEFAULT CHARACTER SET = utf8;
 
@@ -35,44 +117,35 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `sabor`.`tipoactas`
+-- Table `sabor`.`notificaciones`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `sabor`.`tipoactas` (
-  `grupo` VARCHAR(15) NOT NULL,
-  `tipo` VARCHAR(11) NOT NULL,
-  `nombre` VARCHAR(45) NOT NULL,
+CREATE TABLE IF NOT EXISTS `sabor`.`notificaciones` (
+  `idart` INT(11) NOT NULL,
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `estado` CHAR(1) NOT NULL,
+  `origen` VARCHAR(15) NOT NULL,
+  `destino` VARCHAR(15) NOT NULL,
+  `fechahora` DATETIME NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `tipoactas_UNIQUE` (`tipo` ASC),
-  INDEX `fk_grupo_idx` (`grupo` ASC))
+  UNIQUE INDEX `lugares_UNIQUE` (`idart` ASC, `fechahora` ASC),
+  INDEX `fx_origen_idx` (`origen` ASC),
+  INDEX `fx_destino_idx` (`destino` ASC))
 ENGINE = MyISAM
 DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `sabor`.`actas`
+-- Table `sabor`.`recetas`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `sabor`.`actas` (
+CREATE TABLE IF NOT EXISTS `sabor`.`recetas` (
   `grupo` VARCHAR(15) NOT NULL,
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `estado` CHAR(1) NOT NULL,
-  `numero` INT(11) NOT NULL,
-  `fecha` DATE NOT NULL,
-  `tipoacta` VARCHAR(10) NOT NULL,
-  `tema` TEXT NOT NULL,
-  `lugar` VARCHAR(30) NOT NULL,
-  `objetivos` TEXT NOT NULL,
-  `responsable` VARCHAR(25) NOT NULL,
-  `conclusiones` TEXT NOT NULL,
-  `fechasig` DATE NOT NULL,
-  `lugarsig` VARCHAR(30) NOT NULL,
-  `email` VARCHAR(45) NOT NULL,
+  `nombre` TEXT NOT NULL,
+  `preparacion` TEXT NOT NULL,
+  `observaciones` TEXT NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `numero_UNIQUE` (`grupo` ASC, `numero` ASC),
-  INDEX `fx_lug_idx` (`lugar` ASC),
-  INDEX `fx_tipacta_idx` (`tipoacta` ASC),
-  INDEX `fx_lug2_idx` (`lugarsig` ASC))
+  INDEX `fx_grupo_idx` (`grupo` ASC))
 ENGINE = MyISAM
 DEFAULT CHARACTER SET = utf8;
 
@@ -113,115 +186,21 @@ CREATE TABLE IF NOT EXISTS `sabor`.`usuarios` (
   INDEX `fk_grupos` (`grupo` ASC),
   INDEX `fk_serv_idx` (`rol` ASC))
 ENGINE = MyISAM
-AUTO_INCREMENT = 12
-DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
--- Table `sabor`.`asistentes`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `sabor`.`asistentes` (
-  `idacta` INT(11) NOT NULL,
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `asistente` VARCHAR(25) NOT NULL,
-  `estado` CHAR(1) NOT NULL,
-  `rol` VARCHAR(10) NOT NULL,
-  `tiporol` VARCHAR(15) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `asistente_UNIQUE` (`idacta` ASC, `asistente` ASC),
-  INDEX `fx_serv_idx` (`rol` ASC),
-  INDEX `fx_asis_idx` (`asistente` ASC))
-ENGINE = MyISAM
-DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
--- Table `sabor`.`comentarios`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `sabor`.`comentarios` (
-  `idacta` INT(11) NOT NULL,
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `asistente` VARCHAR(25) NOT NULL,
-  `estado` CHAR(1) NOT NULL,
-  `text` TEXT NOT NULL,
-  `fechahora` DATETIME NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `asistente_UNIQUE` (`idacta` ASC, `asistente` ASC))
-ENGINE = MyISAM
-DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
--- Table `sabor`.`etiquetas`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `sabor`.`etiquetas` (
-  `grupo` VARCHAR(15) NOT NULL,
-  `etiqueta` VARCHAR(45) NOT NULL,
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `estado` CHAR(1) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `etiq_UNIQUE` (`etiqueta` ASC),
-  INDEX `fx_grupo_idx` (`grupo` ASC))
-ENGINE = MyISAM
-DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
--- Table `sabor`.`etiquetasacta`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `sabor`.`etiquetasacta` (
-  `idacta` INT(11) NOT NULL,
-  `etiqueta` VARCHAR(45) NOT NULL,
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `estado` CHAR(1) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `etiqacta_UNIQUE` (`idacta` ASC, `etiqueta` ASC),
-  INDEX `fx_etiq_idx` (`etiqueta` ASC))
-ENGINE = MyISAM
-DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
--- Table `sabor`.`notificaciones`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `sabor`.`notificaciones` (
-  `idacta` INT(11) NOT NULL,
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `estado` CHAR(1) NOT NULL,
-  `estadoacta` CHAR(1) NOT NULL,
-  `origen` VARCHAR(15) NOT NULL,
-  `destino` VARCHAR(15) NOT NULL,
-  `fechahora` DATETIME NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `lugares_UNIQUE` (`idacta` ASC, `fechahora` ASC),
-  INDEX `fx_origen_idx` (`origen` ASC),
-  INDEX `fx_destino_idx` (`destino` ASC))
-ENGINE = MyISAM
-DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
--- Table `sabor`.`tareas`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `sabor`.`tareas` (
-  `idacta` INT(11) NOT NULL,
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `estado` CHAR(1) NOT NULL,
-  `text` TEXT NOT NULL,
-  `usuario` VARCHAR(25) NOT NULL,
-  `creada` DATETIME NOT NULL,
-  `inicioplan` DATE NOT NULL,
-  `finalplan` DATE NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `tareas_UNIQUE` (`idacta` ASC, `creada` ASC),
-  INDEX `fx_usuari_idx` (`usuario` ASC))
-ENGINE = MyISAM
+AUTO_INCREMENT = 13
 DEFAULT CHARACTER SET = utf8;
 
 /*
 Poblar roles, se requiere después de limpiar o crear la Bd, o de no, no deja entar
 */
 INSERT INTO `sabor`.`roles` (`rol`, `tiporol`, `id`, `nombre`, `estado`) VALUES ('A', 'A', '1', 'Administrador', 'A');
+INSERT INTO `sabor`.`roles` (`rol`, `tiporol`, `id`, `nombre`, `estado`) VALUES ('U', 'I', '2', 'Usuario', 'A');
+INSERT INTO `sabor`.`roles` (`rol`, `tiporol`, `id`, `nombre`, `estado`) VALUES ('V', 'V', '3', 'Visitante', 'A');
+
+
+/*
+Poblar grupos, se crea grupo demostración
+*/
+INSERT INTO `grupos` (`grupo`, `id`, `nombre`, `estado`, `logo`, `direccion`, `ciudad`, `email`) VALUES ('demo', '1', 'Demostración', 'A', '', '', '', '');
 
 /*
 Poblar usuarios, se requiere un usuario administrador para poder poblarla por scripts

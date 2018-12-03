@@ -34,11 +34,11 @@
   }
 
   $title = 'Local API';
-  $baseref = 'http://127.0.0.1/jumanja.net/sabores/api/v1.5.3/';
+  $baseref = 'http://localhost:8100/sabores/api/v1.5.3/index.php/';
   if(isset($_POST["type"])){
     if($_POST["type"] == "Web"){
       $title = 'Web API';
-      $baseref = 'https://jumanja.net/sabores/api/v1.5.3/';
+      $baseref = 'https://jumanja.net/sabores/api/v1.5.3/index.php/';
     }
   }
 ?>

@@ -1,5 +1,5 @@
 {
-  "grupos": {
+  "groups": {
     "status":"A",
     "fields":[
       {
@@ -64,7 +64,7 @@
         "code":"grupo",
         "desc":"Grupo", "required":true,
         "vwact":"ACRIBMXV", "vwctr":"label",
-        "edact":"", "edctr":"selectTable;grupos,nombre,grupo", "eddef":"",
+        "edact":"", "edctr":"selectTable;groups,nombre,grupo", "eddef":"",
         "icon":"group", "help":"Código de el Grupo"
       },
       {
@@ -94,7 +94,7 @@
         "code":"grupo",
         "desc":"Grupo", "required":true,
         "vwact":"ACRIBMXV", "vwctr":"label",
-        "edact":"", "edctr":"selectTable;grupos,nombre,grupo", "eddef":"",
+        "edact":"", "edctr":"selectTable;groups,nombre,grupo", "eddef":"",
         "icon":"group", "help":"Código de el Grupo"
       },
       {
@@ -131,7 +131,7 @@
         "code":"grupo",
         "desc":"Grupo", "required":true,
         "vwact":"ACRIBMXV", "vwctr":"label",
-        "edact":"A", "edctr":"selectTable;grupos,nombre,grupo", "eddef":"",
+        "edact":"A", "edctr":"selectTable;groups,nombre,grupo", "eddef":"",
         "icon":"group", "help":"Código de el Grupo"
       },
       {
@@ -241,7 +241,7 @@
         "code":"grupo",
         "desc":"Grupo", "required":true,
         "vwact":"ACRIBMXV", "vwctr":"label",
-        "edact":"", "edctr":"selectTable;grupos,nombre,grupo", "eddef":"",
+        "edact":"", "edctr":"selectTable;groups,nombre,grupo", "eddef":"",
         "icon":"group", "help":"Código de el Grupo"
       },
       {

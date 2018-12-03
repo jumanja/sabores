@@ -42,7 +42,7 @@
 			"href":"ui/img/apple-touch-icon.png"
 		}
 	},
-	"title":"Sabrosario - Inventario de Sabores",
+	"title":"Inventario de Sabores",
 	"scripts":{
 		"1":{
 			"src":"js/libs/main.js"

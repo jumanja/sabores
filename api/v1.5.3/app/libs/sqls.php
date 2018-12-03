@@ -18,13 +18,13 @@ function getSQL($name, $app) {
             "mins_update" => "UPDATE actas set estado = :estado, fecha = :fecha, tipoacta = :tipoacta, tema = :tema, " .
                              "lugar = :lugar, objetivos = :objetivos, conclusiones = :conclusiones, fechasig = :fechasig, lugarsig = :lugarsig  " .
                              "WHERE id = :id",
-            "grupos_act"   => "SELECT grupo, id, nombre, estado, logo, direccion, ciudad, email " .
-                             "FROM grupoernidades WHERE estado = 'A'",
-            "grupos_add"   => "INSERT INTO grupoernidades (grupo, id, nombre, estado, logo, direccion, ciudad, email) " .
+            "groups_act"   => "SELECT grupo, id, nombre, estado, logo, direccion, ciudad, email " .
+                             "FROM grupos WHERE estado = 'A'",
+            "groups_add"   => "INSERT INTO grupos (grupo, id, nombre, estado, logo, direccion, ciudad, email) " .
                              "VALUES (:grupo, :id, :nombre, :estado, :logo, :direccion, :ciudad, :email)",
-            "grupos_all"   => "SELECT grupo, id, nombre, estado, logo, direccion, ciudad, email FROM grupoernidades",
-            "grupos_sel"   => "SELECT nombre, grupo FROM grupoernidades where estado = 'A'",
-            "grupos_count" => "SELECT count(1) as count FROM grupoernidades",
+            "groups_all"   => "SELECT grupo, id, nombre, estado, logo, direccion, ciudad, email FROM grupos",
+            "groups_sel"   => "SELECT nombre, grupo FROM grupos where estado = 'A'",
+            "groups_count" => "SELECT count(1) as count FROM grupos",
 
             "places_act"  => "SELECT grupo, lugar, id, estado FROM lugares WHERE estado = 'A' AND grupo = '" . $grupo . "'",
             "places_add"  => "INSERT INTO lugares (grupo, lugar, id, estado) " .

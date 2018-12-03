@@ -216,6 +216,9 @@ Con el error: SyntaxError: Unexpected token E in JSON at position 0
 */
             $("#loginWorking").hide();
 
+            console.log(xhr.responseText );
+
+  //jimte.alertMe(xhr.responseText + "\nCon el error:\n" + error, "Ingreso al Sistema");
             if(xhr.responseText.startsWith("Error: SQLSTATE[HY000]")){
               jimte.alertMe("Al parecer No hay conexión con la base de datos, Por favor Reintente más tarde. \nSi el problema persiste por favor repórtelo al Administrador.", "Ingreso al Sistema");
 
@@ -2051,6 +2054,8 @@ Con el error: SyntaxError: Unexpected token E in JSON at position 0
             },
             error: function(xhr, status, error) {
                 //alert(xhr.responseText + "\nCon el error:\n" + error);
+//jimte.alertMe(xhr.responseText + "\nCon el error:\n" + error, "Ingreso al Sistema");
+
                 if(xhr.responseText.startsWith("Error: SQLSTATE[HY000]")){
                   jimte.alertMe("Al parecer No hay conexión con la base de datos, Por favor Reintente más tarde. \nSi el problema persiste por favor repórtelo al Administrador.", "Adicionando Registro");
                 }
