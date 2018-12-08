@@ -87,7 +87,7 @@
     ]
 
   },
-  "types": {
+  "categs": {
     "status":"A",
     "fields":[
       {
@@ -98,18 +98,18 @@
         "icon":"group", "help":"Código de el Grupo"
       },
       {
-        "code":"tipo", "alias":"tipo",
-        "desc":"Tipo", "required":true,
+        "code":"categoria",
+        "desc":"Categoría", "required":true,
         "vwact":"ACRIBMXV", "vwctr":"label",
         "edact":"A", "edctr":"text", "eddef":"",
-        "icon":"vpn_key", "help":"Tipo de Actas"
+        "icon":"vpn_key", "help":"Categorías"
       },
       {
         "code":"nombre",
         "desc":"Nombre", "required":true,
         "vwact":"ACRIBMXV", "vwctr":"label",
         "edact":"ACB", "edctr":"text", "eddef":"",
-        "icon":"sort_by_alpha", "help":"Nombre del Tipo de Acta"
+        "icon":"sort_by_alpha", "help":"Nombre de la Categoría"
       },
       {
         "code":"estado",
@@ -118,7 +118,44 @@
         "edact":"ACRB",
         "edctr":"select;A-Activo,I-Inactivo,R-Retirado",
         "eddef":"A",
-        "icon":"traffic", "help":"Estado del Tipo de Acta"
+        "icon":"traffic", "help":"Estado de la Categoría"
+      }
+
+    ]
+
+  },
+  "units": {
+    "status":"A",
+    "fields":[
+      {
+        "code":"grupo",
+        "desc":"Grupo", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"", "edctr":"selectTable;groups,nombre,grupo", "eddef":"",
+        "icon":"group", "help":"Código de el Grupo"
+      },
+      {
+        "code":"unidad",
+        "desc":"Unidad", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"A", "edctr":"text", "eddef":"",
+        "icon":"vpn_key", "help":"Unidades"
+      },
+      {
+        "code":"nombre",
+        "desc":"Nombre", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"ACB", "edctr":"text", "eddef":"",
+        "icon":"sort_by_alpha", "help":"Nombre de la Unidad"
+      },
+      {
+        "code":"estado",
+        "desc":"Estado", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"select",
+        "edact":"ACRB",
+        "edctr":"select;A-Activo,I-Inactivo,R-Retirado",
+        "eddef":"A",
+        "icon":"traffic", "help":"Estado de la Unidad"
       }
 
     ]

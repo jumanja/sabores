@@ -52,12 +52,19 @@ function getSQL($name, $app) {
             "tags_minadd"    => "INSERT into etiquetasActa (idacta, etiqueta, estado) VALUES ( :idacta, :etiqueta, :estado) ",
             "tags_minid"     => "SELECT etiqueta FROM etiquetasActa WHERE idacta = :idacta ",
 
-            "types_act"   => "SELECT grupo, tipo, id, nombre, estado " .
-                             "FROM tipoactas a WHERE estado = 'A' AND grupo = '" . $grupo . "'",
-            "types_all"   => "SELECT grupo, tipo, id, nombre, estado FROM tipoactas WHERE grupo = '" . $grupo . "'",
-            "types_add"   => "INSERT INTO tipoactas (grupo, tipo, id, nombre, estado) " .
-                             "VALUES (:grupo, :tipo, :id, :nombre, :estado)",
-            "types_count" => "SELECT count(1) as count FROM tipoactas WHERE grupo = '" . $grupo . "'",
+            "categs_act"   => "SELECT grupo, categoria, id, nombre, estado " .
+                             "FROM categorias a WHERE estado = 'A' AND grupo = '" . $grupo . "'",
+            "categs_all"   => "SELECT grupo, categoria, id, nombre, estado FROM categorias WHERE grupo = '" . $grupo . "'",
+            "categs_add"   => "INSERT INTO categorias (grupo, categoria, id, nombre, estado) " .
+                             "VALUES (:grupo, :categoria, :id, :nombre, :estado)",
+            "categs_count" => "SELECT count(1) as count FROM categorias WHERE grupo = '" . $grupo . "'",
+
+            "units_act"   => "SELECT grupo, unidad, id, nombre, estado " .
+                             "FROM unidades a WHERE estado = 'A' AND grupo = '" . $grupo . "'",
+            "units_all"   => "SELECT grupo, unidad, id, nombre, estado FROM unidades WHERE grupo = '" . $grupo . "'",
+            "units_add"   => "INSERT INTO unidades (grupo, unidad, id, nombre, estado) " .
+                             "VALUES (:grupo, :unidad, :id, :nombre, :estado)",
+            "units_count" => "SELECT count(1) as count FROM unidades WHERE grupo = '" . $grupo . "'",
 
             "users_act"   => "SELECT a.grupo, a.id, a.usuario, a.apellidos, a.nombres, a.password, a.email, a.rol, b.tiporol " .
                              "FROM usuarios a, roles b WHERE a.estado = 'A' and a.rol = b.rol",

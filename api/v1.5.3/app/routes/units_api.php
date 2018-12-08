@@ -1,6 +1,6 @@
 <?php
 /*******************************************
-* API: types
+* API: units
 ********************************************/
 /*
 Si no está definida estaq constante, se está intentando acceder
@@ -37,14 +37,14 @@ SALIDA:  Si el token y id son válidos, retorna en json, ejemplo:
 
 SQLS: 	 [tabla]_count
 --*/
-$app->get('/types/count', function () use($app) {
+$app->get('/units/count', function () use($app) {
 
 	try{
-			$authorized = checkPerm('GET:/types/count', $app);
+			$authorized = checkPerm('GET:/units/count', $app);
 			if($authorized){
 				$resultText = checkToken($app);
 				if(contains("validtoken", $resultText) ){
-		      $sqlCode = 'types_count';
+		      $sqlCode = 'units_count';
 		      $forXSL = '../../../xsl/count.xsl';
 		      simpleReturn($app, $sqlCode, $forXSL);
 				} else {
@@ -53,7 +53,7 @@ $app->get('/types/count', function () use($app) {
 				}
 			}	else {
 				$connection = null;
-				$app->response->body("/types/count " . ACCESSERROR);
+				$app->response->body("/units/count " . ACCESSERROR);
 
 			}
 	}
@@ -106,14 +106,14 @@ SALIDA:  Si el token y id son válidos, retorna en json, ejemplo:
 
 SQLS: 	 [tabla]_all
 --*/
-$app->get("/types", function() use($app)
+$app->get("/units", function() use($app)
 {
  	try{
-			$authorized = checkPerm('GET:/types', $app);
+			$authorized = checkPerm('GET:/units', $app);
 			if($authorized){
 					$resultText = checkToken($app);
 					if(contains("validtoken", $resultText) ){
-						$sqlCode = ($app->request()->params('sqlCode') == "" ? 'types_all' : $app->request()->params('sqlCode') );
+						$sqlCode = ($app->request()->params('sqlCode') == "" ? 'units_all' : $app->request()->params('sqlCode') );
 			      $forXSL = '../../xsl/count.xsl';
 			      simpleReturn($app, $sqlCode, $forXSL);
 					} else {
@@ -122,7 +122,7 @@ $app->get("/types", function() use($app)
 					}
 				}	else {
 					$connection = null;
-					$app->response->body("/types " . ACCESSERROR);
+					$app->response->body("/units " . ACCESSERROR);
 		}
 	}
 	catch(PDOException $e)
@@ -173,14 +173,14 @@ SALIDA:  Si el token y id son válidos, y existe ese registro con ese id, retorn
 
 SQLS: 	 users_all (filtrado por id del usuario a buscar)
 --*/
-$app->get("/types/:id", function($id) use($app)
+$app->get("/units/:id", function($id) use($app)
 {
  	try{
-		$authorized = checkPerm('GET:/types/:id', $app);
+		$authorized = checkPerm('GET:/units/:id', $app);
 		if($authorized){
 				$resultText = checkToken($app);
 				if(contains("validtoken", $resultText) ){
-					$sqlCode = 'types_all';
+					$sqlCode = 'units_all';
 		      $forXSL = '../../xsl/count.xsl';
 		      if($id){
 		        $filter = ' id = ' . $id;
@@ -193,7 +193,7 @@ $app->get("/types/:id", function($id) use($app)
 				}
 		}	else {
 			$connection = null;
-			$app->response->body("/types/:id " . ACCESSERROR);
+			$app->response->body("/units/:id " . ACCESSERROR);
 
 		}
 	}
@@ -244,23 +244,23 @@ SALIDA:  Si el token y id son válidos, y existe un registro con ese id, retorna
 
 SQLS: 	 [tabla]_add
 --*/
-$app->post('/types', function () use($app) {
+$app->post('/units', function () use($app) {
 
 	try{
-		$authorized = checkPerm('POST:/types', $app);
+		$authorized = checkPerm('POST:/units', $app);
 		if($authorized){
 					$resultText = checkToken($app);
 					if(contains("validtoken", $resultText) ){
 /*
 Hasta aquí se inhabilititaría si se quisiera agregar sin tener sesión iniciada
 */
-							$sqlCode = 'types_add';
+							$sqlCode = 'units_add';
 							$forXSL = '../../xsl/count.xsl';
 
 							$newId = null;
 							$prepParams = array(
-										':grupo'       => $app->request()->params('grupo'),
-										':tipo'       => $app->request()->params('tipo'),
+										':grupo'      => $app->request()->params('grupo'),
+										':unidad'  => $app->request()->params('unidad'),
 										':id'         => $newId,
 										':nombre'    	=> $app->request()->params('nombre'),
 										':estado'     => $app->request()->params('estado')
@@ -285,7 +285,7 @@ Hasta aquí se inhabilititaría si se quisiera agregar sin tener sesión iniciad
 						}
 			}	else {
 				$connection = null;
-				$app->response->body("/types (POST) " . ACCESSERROR);
+				$app->response->body("/units (POST) " . ACCESSERROR);
 
 			}
 
@@ -298,10 +298,10 @@ Hasta aquí se inhabilititaría si se quisiera agregar sin tener sesión iniciad
 });
 
 /*--
-URL: /types
+URL: /units
 MÉTODO: PUT
 REQUERIMIENTOS: TO-DO identificar el req actualización de usuarios
-TESTS: api/types_update.sh
+TESTS: api/units_update.sh
 
 DESCRIPCIÓN: Actualiza los datos de un usuario en la base de datos.
 
@@ -337,14 +337,14 @@ SALIDA:  Si el token y id son válidos, y existe es usuario con ese id, retorna
 
 SQLS: 	 autogenerado
 --*/
-$app->put('/types', function () use($app) {
+$app->put('/units', function () use($app) {
 
 	try{
-		$authorized = checkPerm('PUT:/types', $app);
+		$authorized = checkPerm('PUT:/units', $app);
 		if($authorized){
 				$resultText = checkToken($app);
 				if(contains("validtoken", $resultText) ){
-					$tableName = 'tipoactas';
+					$tableName = 'unidades';
 		      $queryUpdate = 'UPDATE ' . $tableName . ' SET ';
 
 					$arr = $app->request()->put();
@@ -385,7 +385,7 @@ $app->put('/types', function () use($app) {
 
 			}	else {
 				$connection = null;
-				$app->response->body("/types (PUT) " . ACCESSERROR);
+				$app->response->body("/units (PUT) " . ACCESSERROR);
 
 			}
 	}
@@ -396,10 +396,10 @@ $app->put('/types', function () use($app) {
 });
 
 /*--
-URL: /types/update
+URL: /units/update
 MÉTODO: POST
 REQUERIMIENTOS: TO-DO identificar el req actualización de usuarios
-TESTS: api/types_update_post.sh
+TESTS: api/units_update_post.sh
 
 DESCRIPCIÓN: Actualiza los datos de un usuario en la base de datos.
 
@@ -434,14 +434,14 @@ SALIDA:  Si el token y id son válidos, y existe es usuario con ese id, retorna 
 
 SQLS: 	 autogenerado
 --*/
-$app->post('/types/update', function () use($app) {
+$app->post('/units/update', function () use($app) {
 
 	try{
-		$authorized = checkPerm('POST:/types/update', $app);
+		$authorized = checkPerm('POST:/units/update', $app);
 		if($authorized){
 				$resultText = checkToken($app);
 				if(contains("validtoken", $resultText) ){
-					$tableName = 'tipoactas';
+					$tableName = 'unidades';
 		      $queryUpdate = 'UPDATE ' . $tableName . ' SET ';
 
 					$arr = $app->request()->post();
@@ -482,7 +482,7 @@ $app->post('/types/update', function () use($app) {
 
 			}	else {
 				$connection = null;
-				$app->response->body("/types/update (POST) " . ACCESSERROR);
+				$app->response->body("/units/update (POST) " . ACCESSERROR);
 
 			}
 	}
@@ -531,14 +531,14 @@ SALIDA:  Si el token y id son válidos, y existe es usuario con ese id, retorna 
 
 SQLS: 	 autogenerado
 --*/
-$app->post('/types/add', function () use($app) {
+$app->post('/units/add', function () use($app) {
 
 	try{
-		$authorized = checkPerm('POST:/types/add', $app);
+		$authorized = checkPerm('POST:/units/add', $app);
 		if($authorized){
 				$resultText = checkToken($app);
 				if(contains("validtoken", $resultText) ){
-					$tableName = 'tipoactas';
+					$tableName = 'unidades';
 		      $queryAdd = 'INSERT INTO ' . $tableName . ' (';
 					$queryFields = "";
 					$queryValues = " VALUES (";
@@ -576,7 +576,7 @@ $app->post('/types/add', function () use($app) {
 
 			}	else {
 				$connection = null;
-				$app->response->body("/types/add (POST) " . ACCESSERROR);
+				$app->response->body("/units/add (POST) " . ACCESSERROR);
 
 			}
 	}
@@ -630,14 +630,14 @@ SALIDA:  Si el token y id son válidos, y existe el registro con ese id, retorna
 
 SQLS: 	 autogenerado
 --*/
-$app->put('/types/delete', function () use($app) {
+$app->put('/units/delete', function () use($app) {
 
 	try{
-		$authorized = checkPerm('PUT:/types/delete', $app);
+		$authorized = checkPerm('PUT:/units/delete', $app);
 		if($authorized){
 					$resultText = checkToken($app);
 					if(contains("validtoken", $resultText) ){
-						$tableName = 'tipoactas';
+						$tableName = 'unidades';
 			      $queryUpdate = "UPDATE " . $tableName . " SET ESTADO = 'R' ".
 													 " WHERE id = " . $app->request()->params('iddelete') ;
 
@@ -658,7 +658,7 @@ $app->put('/types/delete', function () use($app) {
 					}
 			}	else {
 				$connection = null;
-				$app->response->body("/types/delete (PUT) " . ACCESSERROR);
+				$app->response->body("/units/delete (PUT) " . ACCESSERROR);
 
 			}
 

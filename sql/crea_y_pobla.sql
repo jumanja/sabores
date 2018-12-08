@@ -23,13 +23,28 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sabor`.`categorias` (
   `grupo` VARCHAR(15) NOT NULL,
-  `tipo` VARCHAR(11) NOT NULL,
+  `categria` VARCHAR(11) NOT NULL,
   `nombre` VARCHAR(45) NOT NULL,
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `estado` CHAR(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `categorias_UNIQUE` (`nombre` ASC),
-  INDEX `fk_grupo_idx` (`grupo` ASC))
+  INDEX `fk_categ_idx` (`grupo` ASC))
+ENGINE = MyISAM
+DEFAULT CHARACTER SET = utf8;
+
+-- -----------------------------------------------------
+-- Table `sabor`.`unidades`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `sabor`.`unidades` (
+  `grupo` VARCHAR(15) NOT NULL,
+  `unidad` VARCHAR(11) NOT NULL,
+  `nombre` VARCHAR(45) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `estado` CHAR(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `unidades_UNIQUE` (`nombre` ASC),
+  INDEX `fk_unidad_idx` (`grupo` ASC))
 ENGINE = MyISAM
 DEFAULT CHARACTER SET = utf8;
 

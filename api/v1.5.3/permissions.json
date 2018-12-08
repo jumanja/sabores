@@ -11,81 +11,81 @@
   },
   "GET:/tags/count": {
     "tiporol": {
-      "incluye": "I",
+      "incluye": "A",
       "excluye": ""
     },
     "rol": {
-      "incluye": "S",
+      "incluye": "*",
       "excluye": ""
     }
   },
   "GET:/tags": {
     "tiporol": {
-      "incluye": "I",
+      "incluye": "A",
       "excluye": ""
     },
     "rol": {
-      "incluye": "S",
+      "incluye": "*",
       "excluye": ""
     }
   },
   "GET:/tags/:id": {
     "tiporol": {
-      "incluye": "I",
+      "incluye": "A",
       "excluye": ""
     },
     "rol": {
-      "incluye": "S",
+      "incluye": "*",
       "excluye": ""
     }
   },
   "POST:/tags": {
     "tiporol": {
-      "incluye": "I",
+      "incluye": "A",
       "excluye": ""
     },
     "rol": {
-      "incluye": "S",
+      "incluye": "*",
       "excluye": ""
     }
   },
   "PUT:/tags": {
     "tiporol": {
-      "incluye": "I",
+      "incluye": "A",
       "excluye": ""
     },
     "rol": {
-      "incluye": "S",
+      "incluye": "*",
       "excluye": ""
     }
   },
   "POST:/tags/add": {
     "tiporol": {
-      "incluye": "I",
+      "incluye": "A",
       "excluye": ""
     },
     "rol": {
-      "incluye": "S",
+      "incluye": "*",
       "excluye": ""
     }
   },
   "POST:/tags/update": {
     "tiporol": {
-      "incluye": "I",
+      "incluye": "A",
       "excluye": ""
     },
     "rol": {
-      "incluye": "S",
+      "incluye": "*",
       "excluye": ""
     }
   },
   "PUT:/tags/delete": {
     "tiporol": {
-      "incluye": "I",
+      "incluye": "A",
       "excluye": ""
     },
     "rol": {
-      "incluye": "S",
+      "incluye": "*",
       "excluye": ""
     }
   },
@@ -339,7 +339,7 @@
       "excluye": ""
     }
   },
-  "GET:/types/count": {
+  "GET:/categs/count": {
     "tiporol": {
       "incluye": "A",
       "excluye": ""
@@ -349,7 +349,7 @@
       "excluye": ""
     }
   },
-  "GET:/types": {
+  "GET:/categs": {
     "tiporol": {
       "incluye": "AI",
       "excluye": ""
@@ -359,7 +359,7 @@
       "excluye": ""
     }
   },
-  "GET:/types/:id": {
+  "GET:/categs/:id": {
     "tiporol": {
       "incluye": "A",
       "excluye": ""
@@ -369,7 +369,7 @@
       "excluye": ""
     }
   },
-  "POST:/types": {
+  "POST:/categs": {
     "tiporol": {
       "incluye": "A",
       "excluye": ""
@@ -379,7 +379,7 @@
       "excluye": ""
     }
   },
-  "PUT:/types": {
+  "PUT:/categs": {
     "tiporol": {
       "incluye": "A",
       "excluye": ""
@@ -389,7 +389,7 @@
       "excluye": ""
     }
   },
-  "POST:/types/add": {
+  "POST:/categs/add": {
     "tiporol": {
       "incluye": "A",
       "excluye": ""
@@ -399,7 +399,7 @@
       "excluye": ""
     }
   },
-  "POST:/types/update": {
+  "POST:/categs/update": {
     "tiporol": {
       "incluye": "A",
       "excluye": ""
@@ -409,7 +409,87 @@
       "excluye": ""
     }
   },
-  "PUT:/types/delete": {
+  "PUT:/categs/delete": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/units/count": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/units": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/units/:id": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/units": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/units": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/units/add": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/units/update": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/units/delete": {
     "tiporol": {
       "incluye": "A",
       "excluye": ""

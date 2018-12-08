@@ -1,51 +1,9 @@
 {
 	"tablas":{
-		"etiquetas":{
-					"estado":"A",
-					"icon":"local_offer",
-					"api":"tags",
-					"descripcion":"Etiquetas",
-					"tiporol":{
-						"inc":"I",
-						"exc":""
-						},
-					"rol":{
-						"inc":"*",
-						"exc":""
-						}
-		},
-			"grupos":{
-					"estado":"A",
-					"icon":"group",
-					"api":"groups",
-					"descripcion":"Grupos",
-					"tiporol":{
-						"inc":"A",
-						"exc":""
-						},
-					"rol":{
-						"inc":"*",
-						"exc":""
-						}
-			},
-			"lugares":{
-						"estado":"A",
-						"icon":"place",
-						"api":"places",
-						"descripcion":"Lugares",
-						"tiporol":{
-							"inc":"A",
-							"exc":""
-							},
-						"rol":{
-							"inc":"*",
-							"exc":""
-							}
-			},
 		"categorias":{
 					"estado":"A",
 					"icon":"style",
-					"api":"categ",
+					"api":"categs",
 					"descripcion":"Categorías",
 					"tiporol":{
 						"inc":"A",
@@ -56,11 +14,67 @@
 						"exc":""
 						}
 			},
+		"etiquetas":{
+					"estado":"A",
+					"icon":"local_offer",
+					"api":"tags",
+					"descripcion":"Etiquetas",
+					"tiporol":{
+						"inc":"A",
+						"exc":""
+						},
+					"rol":{
+						"inc":"*",
+						"exc":""
+						}
+		},
+		"grupos":{
+				"estado":"A",
+				"icon":"group",
+				"api":"groups",
+				"descripcion":"Grupos",
+				"tiporol":{
+					"inc":"A",
+					"exc":""
+					},
+				"rol":{
+					"inc":"*",
+					"exc":""
+					}
+		},
+		"lugares":{
+					"estado":"A",
+					"icon":"place",
+					"api":"places",
+					"descripcion":"Lugares",
+					"tiporol":{
+						"inc":"A",
+						"exc":""
+						},
+					"rol":{
+						"inc":"*",
+						"exc":""
+						}
+		},
 		"roles":{
 				"estado":"A",
 				"icon":"thumb_up",
 				"api":"servs",
 				"descripcion":"Roles",
+				"tiporol":{
+					"inc":"A",
+					"exc":""
+					},
+				"rol":{
+					"inc":"*",
+					"exc":""
+					}
+		},
+		"unidades":{
+				"estado":"A",
+				"icon":"straigthen",
+				"api":"units",
+				"descripcion":"Unidades de Medida",
 				"tiporol":{
 					"inc":"A",
 					"exc":""

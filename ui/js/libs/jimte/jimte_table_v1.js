@@ -330,6 +330,7 @@ class JimteTab {
     //console.log("sendAdd");
     //Si hay algún campo requerido y vacío, no se puede seguir
     var empty = false;
+    var focus = 0;
     $("#addTable").find( "*[required]" ).each( function() {
         //myText += $(this).attr("id").substring(5) + "|" + $(this).val();
         //console.log($(this));
@@ -337,12 +338,24 @@ class JimteTab {
         if($(this).val() == ""){
           $(this).css("border", "2px dotted red");
           empty = true;
+
+          if(focus == 0){
+            this.focus();
+          }
+          focus++;
+
         } else {
           $(this).css("border", "");
         }
     });
 
     if(empty){
+      M.toast(
+                {html:'Faltan campos Requeridos!',
+                displayLenght: 3000,
+                classes: 'rounded red'}
+              );
+
       return false;
     }
     var self = $(this);
@@ -444,17 +457,28 @@ class JimteTab {
     //begin sendUpdate
     //Si hay algún campo requerido y vacío, no se puede seguir
     var empty = false;
+    var focus = 0;
     $("#editTable").find( "*[required]" ).each( function() {
         //myText += $(this).attr("id").substring(5) + "|" + $(this).val();
         if($(this).val() == ""){
           $(this).css("border", "2px dotted red");
           empty = true;
+          if(focus == 0){
+            this.focus();
+          }
+          focus++;
         } else {
           $(this).css("border", "");
         }
     });
 
     if(empty){
+      M.toast(
+                {html:'Faltan campos Requeridos!',
+                displayLenght: 3000,
+                classes: 'rounded red'}
+              );
+
       return false;
     }
 
