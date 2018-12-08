@@ -10,7 +10,7 @@
 
         <center>
            <?php
-           echo '<h2> Hola Mundo de Sabores! </h2>';
+           echo '<h2> Hola Mundo / Inventario de Sabores! </h2>';
            echo '<h2> Integrantes </h2>';
            echo '<li> Manjarrés Pabón Juan Luis </li>';
            echo '<li> Pardo Rueda Kimberly Johana </li>';
