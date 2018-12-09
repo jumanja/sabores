@@ -50,6 +50,24 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
+-- Table `sabor`.`factores`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `sabor`.`factores` (
+  `grupo` VARCHAR(15) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `unidad1` VARCHAR(11) NOT NULL,
+  `unidad2` VARCHAR(11) NOT NULL,
+  `multip` INT(11) NOT NULL,
+  `adicion` INT(11) NOT NULL,
+  `estado` CHAR(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `unidades_UNIQUE` (`nombre` ASC),
+  INDEX `fk_unidad_idx` (`grupo` ASC))
+ENGINE = MyISAM
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
 -- Table `sabor`.`articulos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sabor`.`articulos` (
