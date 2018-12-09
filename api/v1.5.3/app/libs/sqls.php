@@ -6,6 +6,14 @@ function getSQL($name, $app) {
     $lang = strtolower(substr($lang, 0, 2));
 
     $SQLs  = array(
+
+             "artics_act"   => "SELECT grupo, id, categoria, codigo, nombre, vencim, observaciones, estado " .
+                              "FROM articulos a WHERE estado = 'A' AND grupo = '" . $grupo . "'",
+             "artics_all"   => "SELECT grupo, id, categoria, codigo, nombre, vencim, observaciones, estado FROM articulos WHERE grupo = '" . $grupo . "'",
+             "artics_add"   => "INSERT INTO articulos (grupo, id, categoria, codigo, nombre, vencim, observaciones, estado) " .
+                              "VALUES (:grupo, :id, :categoria, :codigo, :nombre, :vencim, :observaciones, :estado)",
+             "artics_count" => "SELECT count(1) as count FROM articulos WHERE grupo = '" . $grupo . "'",
+
             "mins_add"    => "INSERT INTO actas (grupo, id, estado, fecha, tipoacta, tema, lugar, objetivos, responsable, conclusiones, fechasig, lugarsig) " .
                              "VALUES (:grupo, :id, :estado, :fecha, :tipoacta, :tema, :lugar, :objetivos, :responsable, :conclusiones, :fechasig, :lugarsig) ",
             "mins_exec"   => "SELECT estado, count(1) as cuenta FROM actas grupo BY 1 ",
@@ -18,6 +26,14 @@ function getSQL($name, $app) {
             "mins_update" => "UPDATE actas set estado = :estado, fecha = :fecha, tipoacta = :tipoacta, tema = :tema, " .
                              "lugar = :lugar, objetivos = :objetivos, conclusiones = :conclusiones, fechasig = :fechasig, lugarsig = :lugarsig  " .
                              "WHERE id = :id",
+
+           "factors_act"   => "SELECT grupo, id, unidad1, unidad2, multip, adicion, estado " .
+                            "FROM factores a WHERE estado = 'A' AND grupo = '" . $grupo . "'",
+           "factors_all"   => "SELECT grupo, id, unidad1, unidad2, multip, adicion, estado FROM factores WHERE grupo = '" . $grupo . "'",
+           "factors_add"   => "INSERT INTO factores (grupo, id, unidad1, unidad2, multip, adicion, estado) " .
+                            "VALUES (:grupo, :id, :unidad1, :unidad2, :multip, :adicion, :estado)",
+           "factors_count" => "SELECT count(1) as count FROM factores WHERE grupo = '" . $grupo . "'",
+
             "groups_act"   => "SELECT grupo, id, nombre, estado, logo, direccion, ciudad, email " .
                              "FROM grupos WHERE estado = 'A'",
             "groups_add"   => "INSERT INTO grupos (grupo, id, nombre, estado, logo, direccion, ciudad, email) " .

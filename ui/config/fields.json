@@ -1,4 +1,106 @@
 {
+  "artics": {
+    "status":"A",
+    "fields":[
+      {
+        "code":"grupo",
+        "desc":"Grupo", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"", "edctr":"selectTable;groups,nombre,grupo", "eddef":"",
+        "icon":"group", "help":"Código de el Grupo"
+      },
+      {
+        "code":"categoria",
+        "desc":"Categoría", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"A", "edctr":"selectTable;categs,nombre,categoria", "eddef":"",
+        "icon":"style", "help":"Unidad 1"
+      },
+      {
+        "code":"codigo",
+        "desc":"Código", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"AB", "edctr":"text", "eddef":"",
+        "icon":"vpn_key", "help":"Código que identifica al Artículo"
+      },
+      {
+        "code":"nombre",
+        "desc":"Nombre", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"ACB", "edctr":"text", "eddef":"",
+        "icon":"kitchen", "help":"Nombre del Artículo"
+      },
+      {
+        "code":"vencim",
+        "desc":"Vencimiento", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"ACB", "edctr":"text", "eddef":"",
+        "icon":"trending_down", "help":"Días Vencimiento"
+      },
+      {
+        "code":"estado",
+        "desc":"Estado", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"select",
+        "edact":"ACRB",
+        "edctr":"select;A-Activo,I-Inactivo,R-Retirado",
+        "eddef":"A",
+        "icon":"traffic", "help":"Estado de la Unidad"
+      }
+
+    ]
+
+  },
+  "factors": {
+    "status":"A",
+    "fields":[
+      {
+        "code":"grupo",
+        "desc":"Grupo", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"", "edctr":"selectTable;groups,nombre,grupo", "eddef":"",
+        "icon":"group", "help":"Código de el Grupo"
+      },
+      {
+        "code":"unidad1",
+        "desc":"Unidad1", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"A", "edctr":"selectTable;units,nombre,unidad", "eddef":"",
+        "icon":"vpn_key", "help":"Unidad 1"
+      },
+      {
+        "code":"unidad2",
+        "desc":"Unidad2", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"A", "edctr":"selectTable;units,nombre,unidad", "eddef":"",
+        "icon":"vpn_key", "help":"Unidad 2"
+      },
+      {
+        "code":"multip",
+        "desc":"Multiplica", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"ACB", "edctr":"text", "eddef":"",
+        "icon":"cancel", "help":"Multiplicador"
+      },
+      {
+        "code":"adicion",
+        "desc":"Adicionar", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"ACB", "edctr":"text", "eddef":"",
+        "icon":"add_circle", "help":"Adicionar"
+      },
+      {
+        "code":"estado",
+        "desc":"Estado", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"select",
+        "edact":"ACRB",
+        "edctr":"select;A-Activo,I-Inactivo,R-Retirado",
+        "eddef":"A",
+        "icon":"traffic", "help":"Estado de la Unidad"
+      }
+
+    ]
+
+  },
   "groups": {
     "status":"A",
     "fields":[

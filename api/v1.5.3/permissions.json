@@ -9,6 +9,166 @@
       "excluye": ""
     }
   },
+  "GET:/factors/count": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/factors": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/factors/:id": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/factors": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/factors": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/factors/add": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/factors/update": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/factors/delete": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/artics/count": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/artics": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/artics/:id": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/artics": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/artics": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/artics/add": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/artics/update": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/artics/delete": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
   "GET:/tags/count": {
     "tiporol": {
       "incluye": "A",

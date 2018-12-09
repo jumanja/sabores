@@ -21,6 +21,8 @@ require 'app/routes/places_api.php';  //lugares de reunión
 require 'app/routes/roles_api.php';   //roles
 require 'app/routes/categs_api.php';   //categorias
 require 'app/routes/units_api.php';   //unidades
+require 'app/routes/artics_api.php';   //articulos
+require 'app/routes/factors_api.php';   //factores de conversión
 require 'app/routes/tags_api.php';    //etiquetas
 require 'app/routes/mails_api.php';   //correo electrónico
 require 'app/routes/mins_api.php';    //actas

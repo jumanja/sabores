@@ -1,5 +1,19 @@
 {
 	"tablas":{
+		"articulos":{
+					"estado":"A",
+					"icon":"kitchen",
+					"api":"artics",
+					"descripcion":"Artículos",
+					"tiporol":{
+						"inc":"A",
+						"exc":""
+						},
+					"rol":{
+						"inc":"*",
+						"exc":""
+						}
+			},
 		"categorias":{
 					"estado":"A",
 					"icon":"style",
@@ -27,6 +41,20 @@
 						"inc":"*",
 						"exc":""
 						}
+		},
+		"factores":{
+				"estado":"A",
+				"icon":"compare",
+				"api":"factors",
+				"descripcion":"Factores de Conversión",
+				"tiporol":{
+					"inc":"A",
+					"exc":""
+					},
+				"rol":{
+					"inc":"*",
+					"exc":""
+					}
 		},
 		"grupos":{
 				"estado":"A",
