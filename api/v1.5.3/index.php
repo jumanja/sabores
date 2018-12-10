@@ -22,6 +22,8 @@ require 'app/routes/roles_api.php';   //roles
 require 'app/routes/categs_api.php';   //categorias
 require 'app/routes/units_api.php';   //unidades
 require 'app/routes/artics_api.php';   //articulos
+require 'app/routes/recipes_api.php';   //recetas
+require 'app/routes/invens_api.php';   //inventarios
 require 'app/routes/factors_api.php';   //factores de conversión
 require 'app/routes/tags_api.php';    //etiquetas
 require 'app/routes/mails_api.php';   //correo electrónico

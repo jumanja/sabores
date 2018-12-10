@@ -42,7 +42,7 @@
         "desc":"Observaciones", "required":false,
         "vwact":"ACRIBMXV", "vwctr":"label",
         "edact":"ACB", "edctr":"text", "eddef":"Ninguna",
-        "icon":"comments", "help":"Observaciones∫ "
+        "icon":"comments", "help":"Observaciones "
       },
       {
         "code":"estado",
@@ -166,6 +166,64 @@
     ]
 
   },
+  "invens": {
+    "status":"A",
+    "fields":[
+      {
+        "code":"grupo",
+        "desc":"Grupo", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"", "edctr":"selectTable;groups,nombre,grupo", "eddef":"",
+        "icon":"group", "help":"Código de el Grupo"
+      },
+      {
+        "code":"lugar",
+        "desc":"Lugar", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"A", "edctr":"selectTable;places,lugar,lugar", "eddef":"",
+        "icon":"style", "help":"Lugar"
+      },
+      {
+        "code":"idart",
+        "desc":"Artículo", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"AB", "edctr":"selectTable;artics,nombre,id", "eddef":"",
+        "icon":"vpn_key", "help":"Código del Artículo"
+      },
+      {
+        "code":"unidad",
+        "desc":"Unidad", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"ABC", "edctr":"selectTable;units,nombre,unidad", "eddef":"",
+        "icon":"style", "help":"Lugar"
+      },
+      {
+        "code":"cantidad",
+        "desc":"Cantidad", "required":false,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"ACB", "edctr":"text", "eddef":"0",
+        "icon":"adjust", "help":"Cantidad en Inventario"
+      },
+      {
+        "code":"observaciones",
+        "desc":"Observaciones", "required":false,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"ACB", "edctr":"text", "eddef":"Ninguna",
+        "icon":"comments", "help":"Observaciones "
+      },
+      {
+        "code":"estado",
+        "desc":"Estado", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"select",
+        "edact":"ACRB",
+        "edctr":"select;A-Activo,I-Inactivo,R-Retirado",
+        "eddef":"A",
+        "icon":"traffic", "help":"Estado de la Unidad"
+      }
+
+    ]
+
+  },
   "places": {
     "status":"A",
     "fields":[
@@ -233,6 +291,50 @@
     ]
 
   },
+  "recipes": {
+    "status":"A",
+    "fields":[
+      {
+        "code":"grupo",
+        "desc":"Grupo", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"", "edctr":"selectTable;groups,nombre,grupo", "eddef":"",
+        "icon":"group", "help":"Código de el Grupo"
+      },
+      {
+        "code":"nombre",
+        "desc":"Nombre", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"ACB", "edctr":"text", "eddef":"",
+        "icon":"sort_by_alpha", "help":"Nombre de la Categoría"
+      },
+      {
+        "code":"preparacion",
+        "desc":"Preparacion", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"ABC", "edctr":"textarea", "eddef":"",
+        "icon":"format_list_bulleted", "help":"Preparación"
+      },
+      {
+        "code":"observaciones",
+        "desc":"Observaciones", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"A", "edctr":"text", "eddef":"",
+        "icon":"comments", "help":"Observaciones"
+      },
+      {
+        "code":"estado",
+        "desc":"Estado", "required":true,
+        "vwact":"ACRIBMXV", "vwctr":"select",
+        "edact":"ACRB",
+        "edctr":"select;A-Activo,I-Inactivo,R-Retirado",
+        "eddef":"A",
+        "icon":"traffic", "help":"Estado de la Categoría"
+      }
+
+    ]
+
+  },
   "units": {
     "status":"A",
     "fields":[
@@ -268,9 +370,8 @@
       }
 
     ]
-
   },
-    "users": {
+  "users": {
     "status":"A",
     "fields":[
       {
@@ -334,7 +435,7 @@
         "icon":"traffic", "help":"Estado del Usuario"
       }
 
-    ]
+      ]
 
   },
   "servs": {

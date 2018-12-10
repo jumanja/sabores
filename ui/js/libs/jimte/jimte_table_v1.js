@@ -140,6 +140,11 @@ class JimteTab {
     })
 
   }
+
+  jsonEscape(str)  {
+    return str.replace(/\n/g, "\\\\n").replace(/\r/g, "\\\\r").replace(/\t/g, "\\\\t");
+  }
+
   load_table(){
     var self = $(this);
 
@@ -171,8 +176,14 @@ class JimteTab {
           var contenido = "";
           $("#myTable")[0].innerHTML = "";
 
+          //console.log("forma1:", data);
+          //var strFy = JSON.stringify(data);
+          //strFy = jimte_table.jsonEscape(strFy);
+          //data = JSON.parse(strFy);  //para lidiar con saltos
+
           //var records = [];
           $.each( data, function( key, val ) {
+
             if(cuantos == 0) {
                 contenido = '<tr class="header">';
                 var columns = 0;
@@ -206,6 +217,7 @@ class JimteTab {
                 key2.indexOf("password") == -1 &&
                 key2.indexOf("token") == -1  ){
 
+                  //val2
                   if(key2 == "estado"){
                     contenido += '<td ' +
                                  'onclick="jimte_table.overlayOn(\'R\', this.parentNode)"' +
@@ -215,7 +227,12 @@ class JimteTab {
                                  ' lighten-3">' + val2 + '</td>';
 
                   } else {
-                    contenido += "<td>" + val2 + "</td>";
+                    //if(val2.length > 100){
+                    //  contenido += "<td>" + val2.substr(0,50) + "...</td>";
+                    //} else {
+                      contenido += "<td>" + val2 + "</td>";
+
+                    //}
                   }
               }
             });
@@ -381,7 +398,7 @@ class JimteTab {
 
     var inc;
     for (inc = 0; inc < arrayFields.length; inc++) {
-        form_data.append(arrayFields[inc], $("#" + arrayFields[inc]).val() );
+        form_data.append(arrayFields[inc], $("#" + arrayFields[inc]).val().replace(/\n/g,'.') );
     }
 
     //console.log("sendAdd!" + form_data);
@@ -506,7 +523,7 @@ class JimteTab {
 
     var inc;
     for (inc = 0; inc < arrayFields.length; inc++) {
-        form_data.append(arrayFields[inc], $("#" + arrayFields[inc]).val() );
+        form_data.append(arrayFields[inc], $("#" + arrayFields[inc]).val().replace(/\n/g,'.') );
     }
 
     //console.log("sendUpdate!" + form_data);
@@ -1251,6 +1268,16 @@ color, date, datetime-local, email, month, number, range, search, tel, time, url
                                           "</select>";
 
                             }
+                            //textarea
+                            if(controls[0] == "textarea"){
+                              inputCtrl = "<textarea readonly class='input-control browser-default black-text' type='" +
+                                          controls[0] + "' " +
+                                          "id='add_" + alias + "' " +
+                                          "name='add_" + alias + "' " +
+                                          requiredCtrl + ">" +
+                                          val1.eddef + "</textarea>";
+                            }
+
 
                             //Si está permitido Adición
                             if(

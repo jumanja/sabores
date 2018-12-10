@@ -249,6 +249,166 @@
       "excluye": ""
     }
   },
+  "GET:/recipes/count": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/recipes": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/recipes/:id": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/recipes": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/recipes": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/recipes/add": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/recipes/update": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/recipesI/delete": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/invens/count": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/invens": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "GET:/invens/:id": {
+    "tiporol": {
+      "incluye": "A",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/invens": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/invens": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/invens/add": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "POST:/invens/update": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
+  "PUT:/invens/delete": {
+    "tiporol": {
+      "incluye": "AI",
+      "excluye": ""
+    },
+    "rol": {
+      "incluye": "*",
+      "excluye": ""
+    }
+  },
   "GET:/users/count": {
     "tiporol": {
       "incluye": "A",

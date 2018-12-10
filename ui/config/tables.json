@@ -2,11 +2,11 @@
 	"tablas":{
 		"articulos":{
 					"estado":"A",
-					"icon":"kitchen",
+					"icon":"storage",
 					"api":"artics",
 					"descripcion":"Artículos",
 					"tiporol":{
-						"inc":"A",
+						"inc":"AI",
 						"exc":""
 						},
 					"rol":{
@@ -70,6 +70,20 @@
 					"exc":""
 					}
 		},
+		"inventarios":{
+					"estado":"A",
+					"icon":"kitchen",
+					"api":"invens",
+					"descripcion":"Inventarios",
+					"tiporol":{
+						"inc":"AI",
+						"exc":""
+						},
+					"rol":{
+						"inc":"*",
+						"exc":""
+						}
+			},
 		"lugares":{
 					"estado":"A",
 					"icon":"place",
@@ -83,6 +97,20 @@
 						"inc":"*",
 						"exc":""
 						}
+		},
+		"recetas":{
+				"estado":"A",
+				"icon":"restaurant_menu",
+				"api":"recipes",
+				"descripcion":"Recetas",
+				"tiporol":{
+					"inc":"AI",
+					"exc":""
+					},
+				"rol":{
+					"inc":"*",
+					"exc":""
+					}
 		},
 		"roles":{
 				"estado":"A",
@@ -100,7 +128,7 @@
 		},
 		"unidades":{
 				"estado":"A",
-				"icon":"straigthen",
+				"icon":"straighten",
 				"api":"units",
 				"descripcion":"Unidades de Medida",
 				"tiporol":{

@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `sabor`.`articulos` (
   `observaciones` TEXT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fx_grupo_idx` (`grupo` ASC),
-  INDEX `fx_categ_idx` (`categoria` ASC))
+  UNIQUE INDEX `fx_catart_idx` (`codigo` ASC))
 ENGINE = MyISAM
 DEFAULT CHARACTER SET = utf8;
 
@@ -94,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `sabor`.`inventarios` (
   `cantidad` double NOT NULL,
   `observaciones` TEXT NOT NULL,
   `fechaant` DATETIME NULL DEFAULT NULL,
-  `cantaant` double NOT NULL,
+  `cantiant` double NOT NULL DEFAULT 0,
   `fechasig` DATETIME NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   INDEX `fx_inv_idx` (`grupo` ASC, `lugar` ASC, `idart` ASC))

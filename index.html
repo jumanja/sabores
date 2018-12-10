@@ -45,7 +45,7 @@
       <nav class="top-nav navContent cyan darken-3">
           <div class="page-title cyan darken-3">
             <a href="#" data-target="sideMenu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-
+            <a name="top-nav"></a>
               <a href="https://sabores.jumanja.net">
 
               <img class="logo" style="float:left; width:62px" src="ui/img/logo_tipo.png">
@@ -545,6 +545,7 @@
       <!--<h5><i class="material-icons">settings</i>&nbsp;Configurar</h5>-->
 
       <div class="card-panel">
+          <a name="anclaTabla"></a>
           <div class="card-content">
             <div class="row">
               <div class="col s1 hide-on-small-only">
@@ -569,6 +570,23 @@
           </div>
 
           <div class="oculto" id="table_content">
+            <div class="fixed-action-btn">
+              <a class="btn-floating btn-large red accent-4">
+                <i class="large material-icons">menu</i>
+              </a>
+              <ul>
+<!--
+                <li><a class="btn-floating red"><i class="material-icons">publish</i></a></li>
+                <li><a class="btn-floating yellow darken-1"><i class="material-icons">add</i></a></li>
+                <li><a class="btn-floating green"><i class="material-icons">remove_red_eye</i></a></li>
+                <li><a class="btn-floating blue"><i class="material-icons">replay</i></a></li>
+-->
+<li><a href="#top-nav" title="Ir Arriba" class="btn-floating teal"><i class="material-icons">publish</i></a></li>
+<li><a title="Agregar Registro" class="btn-floating teal"><i onclick="jimte_table.overlayOn('A');" class="material-icons">add</i></a></li>
+<li><a title="Ver Todo" class="btn-floating teal"><i onclick="jimte_table.resetFilters();" class="material-icons">remove_red_eye</i></a></li>
+<li><a title="Refrescar Tabla" class="btn-floating teal"><i onclick="jimte_table.refreshTable();" class="material-icons">replay</i></a></li>
+              </ul>
+            </div>
 
               <div class="row">
                   <div class="col s10 m8">
