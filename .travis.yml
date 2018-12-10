@@ -3,3 +3,7 @@ php:
   - '5.6'
 before_script:
   - phpenv config-rm xdebug.ini
+matrix:
+  include:
+    - php: 5.6
+      env: WP_TRAVISCI=travis:phpunit
