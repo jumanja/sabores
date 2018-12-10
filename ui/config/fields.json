@@ -32,10 +32,17 @@
       },
       {
         "code":"vencim",
-        "desc":"Vencimiento", "required":true,
+        "desc":"Vencimiento", "required":false,
         "vwact":"ACRIBMXV", "vwctr":"label",
-        "edact":"ACB", "edctr":"text", "eddef":"",
+        "edact":"ACB", "edctr":"text", "eddef":"0",
         "icon":"trending_down", "help":"Días Vencimiento"
+      },
+      {
+        "code":"observaciones",
+        "desc":"Observaciones", "required":false,
+        "vwact":"ACRIBMXV", "vwctr":"label",
+        "edact":"ACB", "edctr":"text", "eddef":"Ninguna",
+        "icon":"comments", "help":"Observaciones∫ "
       },
       {
         "code":"estado",
